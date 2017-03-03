@@ -18,4 +18,13 @@ export class TutorialComponent {
   onClick(value) {
     console.log(value);
   }
+
+  // Directives ngIf
+  public showLineIf = true;
+
+  // ngSwitch
+  public color =  "red";
+
+  // ngFor 
+ public colors: string[] = ["red", "blue", "green"]; 
 }

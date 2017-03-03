@@ -3,8 +3,26 @@
 
 <button (mouseover)="onClick(name.value)">Click me</button>
 <input type="text" #name/>
-<p> Sử dụng Two way binding </p>
+
+<p>Ex: Sử dụng Two way binding </p>
     <input type="text" [(ngModel)] = "fName"/>
     <input type="text" [(ngModel)] = "lName"/>
 <br>
     Full Name: {{fName}} {{lName}}
+<p> Directives </p>
+<br>
+    <p> Ex: ngIf </p>
+    <h3 *ngIf = "showLineIf"> This ngIf Directives </h3>
+    <br>
+    <p> Ex: ngSwitch </p>
+    <div [ngSwitch] = "color">
+        <p *ngSwitchCase = "'red'"> Red </p> 
+        <p *ngSwitchCase = "'blue'"> Blue </p> 
+        <p *ngSwitchCase = "'green'"> Green </p> 
+        <p *ngSwitchDefault> Default color Black</p>
+    </div>
+    <br>
+    <p> Ex: ngFor </p>
+    <ul>
+        <li *ngFor= "let color of colors"> {{color}} </li>
+    </ul>
