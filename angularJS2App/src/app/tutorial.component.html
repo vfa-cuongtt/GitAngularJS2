@@ -1,3 +1,10 @@
 <h2 [class.redColor] = "applyClass"> {{title}} </h2>
 <h4 [style.color] = "blueColor?'blue':'orange'" > Hello </h4>
 
+<button (mouseover)="onClick(name.value)">Click me</button>
+<input type="text" #name/>
+<p> Sử dụng Two way binding </p>
+    <input type="text" [(ngModel)] = "fName"/>
+    <input type="text" [(ngModel)] = "lName"/>
+<br>
+    Full Name: {{fName}} {{lName}}

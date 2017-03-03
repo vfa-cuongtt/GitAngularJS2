@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { TutorialComponent } from './tutorial.component';
+
 @NgModule({
   declarations: [
     AppComponent,
