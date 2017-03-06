@@ -3,6 +3,10 @@
 
 <button (mouseover)="onClick(name.value)">Click me</button>
 <input type="text" #name/>
+<p> Ex: One way binding</p>
+<img [src] = "image"/>
+<br>
+<input type="text" [value] = "welcomeText" />
 
 <p>Ex: Sử dụng Two way binding </p>
     <input type="text" [(ngModel)] = "fName"/>
@@ -10,19 +14,30 @@
 <br>
     Full Name: {{fName}} {{lName}}
 <p> Directives </p>
-<br>
     <p> Ex: ngIf </p>
     <h3 *ngIf = "showLineIf"> This ngIf Directives </h3>
     <br>
     <p> Ex: ngSwitch </p>
     <div [ngSwitch] = "color">
-        <p *ngSwitchCase = "'red'"> Red </p> 
-        <p *ngSwitchCase = "'blue'"> Blue </p> 
-        <p *ngSwitchCase = "'green'"> Green </p> 
-        <p *ngSwitchDefault> Default color Black</p>
+        <h3 *ngSwitchCase = "'red'"> Red </h3> 
+        <h3 *ngSwitchCase = "'blue'"> Blue </h3> 
+        <h3 *ngSwitchCase = "'green'"> Green </h3> 
+        <h3 *ngSwitchDefault> Default color Black</h3>
     </div>
     <br>
     <p> Ex: ngFor </p>
     <ul>
         <li *ngFor= "let color of colors"> {{color}} </li>
     </ul>
+<p> Attribute Directives</p>
+<p>Ex: ngClass</p>
+    <div>
+        <h4 [ngClass]="{classOne:cOne,classTwo:cTwo}"> Ex NgClass  </h4>
+    </div>
+    <button (click)="onTouch()" > Click me </button>
+<p>Ex: ngClass</p>
+    <div>
+        <h4 [ngStyle]="{'font-style':style,'font-size':size}">Ex: ngstyle</h4>
+    </div>
+
+    
